@@ -1,0 +1,102 @@
+.tittle {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content:first baseline ;
+    align-items: center;
+}   
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+  }
+  .container p {
+    font-family: "Roboto Slab", serif;
+    font-size: 45px;
+    margin: 0;
+  }
+  .container p span {
+    color: rgb(255, 255, 255);
+  }
+  .container .pulse-container {
+    position: relative;
+  }
+  .container .pulse-container p span:nth-of-type(3) {
+    margin-left: 169px;
+  }
+  .container .pulse-container p span.staticize {
+    color: red;
+    position: absolute;
+    top: 2;
+    left: 189px;
+  }
+  
+  .breathe {
+    font-weight: 600;
+    animation-name: breathe;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  .pulse {
+    font-weight: 500;
+    animation: pulse;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-and-out;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  @keyframes breathe {
+    0% {
+      font-size: 45px;
+    }
+    50% {
+      font-size: 43px;
+    }
+    100% {
+      font-size: 45px;
+    }
+  }
+  @keyframes pulse {
+    0% {
+      font-size: 45px;
+    }
+    100% {
+      font-size: 47px;
+    }
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    background: linear-gradient(-45deg , white ,black , white , black);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+}
+@keyframes change{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
